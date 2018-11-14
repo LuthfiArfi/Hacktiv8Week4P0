@@ -6,7 +6,19 @@ digit nya paling sedikit adalah 3 * 8 atau 4 * 6, sehingga function akan me-retu
 
 function digitPerkalianMinimum(angka) {
   // you can only write your code here!
-  while
+  var hasilBagi = 0;
+  var result = 9999;
+  var numString = '';
+  for (var i = 0; i <= angka; i++) {
+    if (angka % i === 0){
+      hasilBagi = angka / i;
+      numString = hasilBagi.toString() + i.toString();
+      if (numString.length < result) {
+        result = numString.length;
+      }
+    }
+  }
+  return result;
 }
 
 // TEST CASES
