@@ -1,17 +1,12 @@
 function angkaPrima(angka) {
   // you can only write your code here!
-  if ((angka > 0 && angka <= 3) || angka === 5 || angka === 7) {
-    return true
+  var check = true;
+  for (i = 2; i < angka; i++){
+    if (angka % i === 0){
+      check = false;
+    }
   }
-  else if (angka % 2 === 0 || angka % 3 === 0) {
-    return false;
-  }
-  else if (angka % 5 === 0 || angka % 7 === 0) {
-    return false;
-  }
-  else{
-    return true;
-  }
+  return check;
 }
 
 // TEST CASES
@@ -20,4 +15,4 @@ console.log(angkaPrima(7)); // true
 console.log(angkaPrima(6)); // false
 console.log(angkaPrima(23)); // true
 console.log(angkaPrima(33)); // false
-console.log(angkaPrima(5531342)); 
+console.log(angkaPrima(5531342));
